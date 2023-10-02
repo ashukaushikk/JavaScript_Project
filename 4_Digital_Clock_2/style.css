@@ -11,7 +11,7 @@ body {
   background: #10101e;
 }
 
-.datetime {
+.dateTime {
   color: #fff;
   background: #10101e;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -25,7 +25,7 @@ body {
   transition-property: background, box-shadow;
 }
 
-.datetime:hover {
+.dateTime:hover {
   background: #2e94e3;
   box-shadow: 0 0 20px #2e94e3;
 }
