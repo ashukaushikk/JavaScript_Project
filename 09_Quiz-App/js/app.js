@@ -11,7 +11,7 @@ const quizData = [{
         a: "Hypertext Markup Language",
         b: "Cascading Style Sheet",
         c: "Jason Object Notation",
-        d: "Helicopters Terminals Motorboats Lamborginis",
+        d: "Helicopters Terminals Motorboats Lamborghini",
         correct: "a",
     },
     {
@@ -27,7 +27,7 @@ const quizData = [{
         a: "Hypertext Markup Language",
         b: "Cascading Style Sheet",
         c: "Jason Object Notation",
-        d: "Helicopters Terminals Motorboats Lamborginis",
+        d: "Helicopters Terminals Motorboats Lamborghini",
         correct: "b",
     }
 ];
