@@ -1,24 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
-    <link rel="stylesheet" href="css/custom.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="myDIV" class="header">
+      <h2>My To Do List</h2>
+      <input type="text" id="myInput" placeholder="Write here something..." />
+      <span class="addUser">Add</span>
+    </div>
 
-<body>
-    <main>
-        <div class="box">
-            <input type="text" id="item" autofocus placeholder="Write something here...">
-            <ul id="to-do-box">
-            </ul>
-        </div>
-    </main>
-    <script src="https://kit.fontawesome.com/bf520e6492.js" crossorigin="anonymous"></script>
-    <script src="js/app.js"></script>
-</body>
+    <div id ="records">
+      <!-- <ul>
+        <li>Hit the gym <i id="editBtn" class="fa fa-edit" ></i> <i id="deleteBtn" class="fa fa-trash"></i></li>
+      </ul> -->
+    </div>
+  </body>
+  <script src="index.js"></script>
 
+  <!-- <script>
+      // Create a "close" button and append it to each list item
+      var myNodelist = document.getElementsByTagName("LI");
+      var i;
+      for (i = 0; i < myNodelist.length; i++) {
+        var span = document.createElement("SPAN");
+        var txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        myNodelist[i].appendChild(span);
+      }
+
+      // Click on a close button to hide the current list item
+      var close = document.getElementsByClassName("close");
+      var i;
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function () {
+          var div = this.parentElement;
+          div.style.display = "none";
+        };
+      }
+
+      // Add a "checked" symbol when clicking on a list item
+      var list = document.querySelector("ul");
+      list.addEventListener(
+        "click",
+        function (ev) {
+          if (ev.target.tagName === "LI") {
+            ev.target.classList.toggle("checked");
+          }
+        },
+        false
+      );
+
+      // Create a new list item when clicking on the "Add" button
+      function newElement() {
+        var li = document.createElement("li");
+        var inputValue = document.getElementById("myInput").value;
+        var t = document.createTextNode(inputValue);
+        li.appendChild(t);
+        if (inputValue === "") {
+          alert("You must write something!");
+        } else {
+          document.getElementById("myUL").appendChild(li);
+        }
+        document.getElementById("myInput").value = "";
+
+        var span = document.createElement("SPAN");
+        var txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        li.appendChild(span);
+
+        for (i = 0; i < close.length; i++) {
+          close[i].onclick = function () {
+            var div = this.parentElement;
+            div.style.display = "none";
+          };
+        }
+      }
+    </script> -->
 </html>
