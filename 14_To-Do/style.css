@@ -3,10 +3,16 @@
   box-sizing: border-box;
 }
 
+#records{
+  overflow-y: scroll;
+  height: 5%;
+}
+
 /* Remove margins and padding from the list */
 ul {
   margin: 0;
   padding: 0;
+  overflow-y: scroll;
 }
 
 /* Style the list items */
@@ -36,24 +42,25 @@ ul li:hover {
 }
 
 /* When clicked on, add a background color and strike out text */
-ul li.checked {
-  background: #888;
-  color: #fff;
+ul li #checked {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 5px;
+  position: absolute;
+  top: 28%;
+  right: 10%;
   text-decoration: line-through;
+  height: 25px;
+  width: 25px;
 }
 
-/* Add a "checked" mark when clicked on */
-ul li.checked::before {
-  content: '';
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
+.isChecked {
+  background-color: #f44336;
+  border-radius: 2px;
+  height: 60%;
+  width: 60%;
 }
 
 ul i {
@@ -65,7 +72,6 @@ ul #index {
   left: 0.5%;
   font-style: normal;
   font-weight: bold;
-  
 }
 
 ul #editBtn {
@@ -76,7 +82,8 @@ ul #deleteBtn {
   right: 3%;
 }
 
-ul #editBtn, ul #deleteBtn {
+ul #editBtn,
+ul #deleteBtn {
   background-color: #f44336; /* Green */
   border: 1px solid f44336;
   color: white;
@@ -88,11 +95,13 @@ ul #editBtn, ul #deleteBtn {
   cursor: pointer;
 }
 
-ul #editBtn:not(:last-child), ul #deleteBtn:not(:last-child)  {
+ul #editBtn:not(:last-child),
+ul #deleteBtn:not(:last-child) {
   border-right: none; /* Prevent double borders */
 }
 
-ul #editBtn:hover, ul #deleteBtn:hover {
+ul #editBtn:hover,
+ul #deleteBtn:hover {
   background-color: #3e8e41;
 }
 
@@ -153,4 +162,17 @@ input {
 
 .addUser:hover {
   background-color: #bbb;
+}
+
+#addtionalCheckbox h2 {
+  padding: 12px 8px 12px 40px;
+  background: #f44336;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+/* You can style the label as needed */
+label {
+  font-size: 16px;
 }
